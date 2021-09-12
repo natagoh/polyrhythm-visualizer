@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import useSideScroll from '../utils/useSideScroll';
 
 import './Grid.css';
 
 export default function Grid(props) {
   const { left, right } = props;
+  const scrollRef = useSideScroll();
 
   // euclidean algorithm
   // requires x > y
@@ -24,7 +26,7 @@ export default function Grid(props) {
   const leftBeat = Math.floor(commonMultiple / left);
 
   return (
-    <div className="grid-container">
+    <div className="grid-container" ref={scrollRef}>
       <div className="rhythm-container">
         {[...Array(commonMultiple).keys()].map((i) => {
           const isBeat = i % rightBeat === 0;
