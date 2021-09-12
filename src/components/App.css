@@ -18,3 +18,8 @@ body, html {
   text-align: center;
 }
 
+.title {
+  font-weight: bold;
+  font-size: 4em;
+}
+

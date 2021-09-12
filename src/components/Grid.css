@@ -1,10 +1,5 @@
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
 .container {
-  display: grid;
+  display: flex;
   
   background-color: #1c1b1d;
   color: #4e3e3e;
@@ -12,3 +7,43 @@ body, html {
   text-align: center;
 }
 
+.rhythm-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.rhythm-container div {
+  width: 100px;
+  height: 100px;
+
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.note {
+  background-color: #4e3e3e;
+}
+
+.note-beat {
+  font-weight: bold;
+  font-size: 1.5em;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* in the future might want different color for right and left hands */
+.note-right {
+  background-color: #deaf9d;
+  color: #1c1b1d;
+}
+
+.note-left {
+  background-color: #deaf9d;
+  color: #1c1b1d;
+}

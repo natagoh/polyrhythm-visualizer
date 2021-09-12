@@ -1,25 +1,13 @@
 import React from 'react';
+import Grid from './Grid';
 
 import './App.css';
 
 export default function App() {
-  // euclidean algorithm
-  // requires x > y
-  const gcd = (x, y) => {
-    if (x === 0) return y;
-    if (y === 0) return x;
-    const remainder = x % y;
-    return gcd(y, remainder);
-  };
-
-  const lcd = (x, y) => (x * y) / (x > y
-    ? gcd(x, y) : gcd(y, x));
-
-  console.log(lcd(3, 2));
-
   return (
     <div className="container">
-      <h1>Polyrhythm Visualizer</h1>
+      <div className="title">Polyrhythm Visualizer</div>
+      <Grid right={4} left={3} />
     </div>
   );
 }
