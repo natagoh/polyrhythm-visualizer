@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 
-function App() {
+export default function App() {
   // euclidean algorithm
   // requires x > y
   const gcd = (x, y) => {
@@ -23,5 +23,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
