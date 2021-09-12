@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="container">
       <div className="title">Polyrhythm Visualizer</div>
-      <Grid right={4} left={3} />
+      <Grid right={4} left={5} />
     </div>
   );
 }
