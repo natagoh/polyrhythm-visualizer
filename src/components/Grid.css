@@ -14,7 +14,7 @@
 
 /* custom scrollbar style */
 .grid-container::-webkit-scrollbar {
-  width: 0.5em;
+  height: 0.75em;
 }
  
 .grid-container::-webkit-scrollbar-track {
@@ -24,6 +24,14 @@
 .grid-container::-webkit-scrollbar-thumb {
   background-color: #4e3e3e;
   border-radius: 0.5em;
+}
+
+.grid-container::-webkit-scrollbar-track-piece:end {
+  margin-right: 8px; 
+}
+
+.grid-container::-webkit-scrollbar-track-piece:start {
+  margin-left: 8px;
 }
 
 .rhythm-container {
