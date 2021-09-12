@@ -4,6 +4,12 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+import './fonts/Source_Code_Pro/SourceCodePro-Medium.ttf';
+import './fonts/Source_Code_Pro/SourceCodePro-Light.ttf';
+import './fonts/Source_Code_Pro/SourceCodePro-Bold.ttf';
+import './fonts/Source_Code_Pro/SourceCodePro-Regular.ttf';
+import './fonts/Source_Code_Pro/SourceCodePro-SemiBold.ttf';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

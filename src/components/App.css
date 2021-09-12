@@ -13,13 +13,17 @@ body, html {
   height: 100vh;
   
   background-color: #1c1b1d;
-  color: #deaf9d;
-
-  text-align: center;
 }
 
 .title {
-  font-weight: bold;
-  font-size: 4em;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 5em;
+  color: #deaf9d;
+  text-align: center;
+
+  --title-padding: 200px;
+  margin-bottom: var(--title-padding);
+  margin-top: calc(var(--title-padding) * -1);
 }
 

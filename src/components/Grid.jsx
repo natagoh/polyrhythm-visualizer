@@ -24,7 +24,7 @@ export default function Grid(props) {
   const leftBeat = Math.floor(commonMultiple / left);
 
   return (
-    <div className="container">
+    <div className="grid-container">
       <div className="rhythm-container">
         {[...Array(commonMultiple).keys()].map((i) => {
           const isBeat = i % rightBeat === 0;
