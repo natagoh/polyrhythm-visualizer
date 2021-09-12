@@ -9,6 +9,21 @@
 
   overflow: auto;
   max-width: 80vw;
+  padding-bottom: 0.5em;
+}
+
+/* custom scrollbar style */
+.grid-container::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.grid-container::-webkit-scrollbar-track {
+  border-radius: 0.5em;
+}
+ 
+.grid-container::-webkit-scrollbar-thumb {
+  background-color: #4e3e3e;
+  border-radius: 0.5em;
 }
 
 .rhythm-container {

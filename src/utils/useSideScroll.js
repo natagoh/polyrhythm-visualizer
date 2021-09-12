@@ -17,7 +17,7 @@ export default function useSideScroll() {
         }
         el.scrollTo({
           left: el.scrollLeft + e.deltaY,
-          behavior: 'smooth',
+          // behavior: 'smooth',
         });
       };
       el.addEventListener('wheel', onWheel);
