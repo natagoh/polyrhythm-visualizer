@@ -4,12 +4,14 @@
   align-items: flex-start;
   justify-content: center;
   
-  background-color: #1c1b1d;
-  color: #4e3e3e;
+  background-color: var(--bg-color);
+  color: var(--sub-color);
 
   overflow: auto;
   max-width: 80vw;
   padding-bottom: 0.5em;
+
+  margin: 100px 0;
 }
 
 /* custom scrollbar style */
@@ -22,7 +24,7 @@
 }
  
 .grid-container::-webkit-scrollbar-thumb {
-  background-color: #4e3e3e;
+  background-color: var(--sub-color);
   border-radius: 0.5em;
 }
 
@@ -44,15 +46,15 @@
 }
 
 .rhythm-container div {
-  width: 100px;
-  height: 100px;
+  width: 96px;
+  height: 96px;
 
   margin: 8px;
   border-radius: 8px;
 }
 
 .note {
-  background-color: #4e3e3e;
+  background-color: var(--sub-color);
 }
 
 .note-beat {
@@ -68,11 +70,11 @@
 
 /* in the future might want different color for right and left hands */
 .note-right {
-  background-color: #deaf9d;
+  background-color: var(--main-color);
   color: #1c1b1d;
 }
 
 .note-left {
-  background-color: #deaf9d;
+  background-color: var(--main-color);
   color: #1c1b1d;
 }
