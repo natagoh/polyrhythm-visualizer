@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
   
   background-color: var(--bg-color);
   color: var(--sub-color);
@@ -12,6 +13,24 @@
   padding-bottom: 0.5em;
 
   margin: 100px 0;
+}
+
+.animate {
+  justify-content: flex-start;
+  margin-left: 100vw;
+  overflow: visible;
+  animation: play-rhythm 10s infinite;
+  animation-timing-function: linear;
+}
+
+/* rhythm animation */
+@keyframes play-rhythm {
+  from {
+    right: 0px;
+  }
+  to {
+    right: calc(4368px);
+  }
 }
 
 /* custom scrollbar style */
@@ -45,6 +64,7 @@
   justify-content: center;
 }
 
+/* the size of the beat squares */
 .rhythm-container div {
   width: 96px;
   height: 96px;
@@ -79,4 +99,4 @@
   color: #1c1b1d;
 }
 
-/* beat animation */
+

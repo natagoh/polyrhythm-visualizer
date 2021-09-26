@@ -10,15 +10,15 @@ export default function Grid(props) {
   const { left, right, animate } = props;
   const scrollRef = useSideScroll();
   const [scrolled, setScrolled] = useState(0);
+  const [width, setWidth] = useState(0);
 
   // can find this defined in Grid.css in .rhythm-container div
   const BEAT_WIDTH = 96;
+  const BEAT_MARGIN = 8;
 
   useEffect(() => {
-    console.log('scrolling pos');
-    const rect = scrollRef.current.getBoundingClientRect();
-    const { width } = rect;
-    console.log('hi', rect, 'x', width);
+    // const rect = scrollRef.current.getBoundingClientRect();
+    setWidth(Math.ceil(window.innerWidth));
   }, []);
 
   // euclidean algorithm
@@ -40,7 +40,7 @@ export default function Grid(props) {
   const handleScroll = (e) => {
     const element = e.target;
     if (element.scrollLeft >= BEAT_WIDTH) {
-      console.log('we need to add stuff');
+      console.log('we need to add stuff', width);
       if (animate) {
         console.log('if animated add stuff');
       }
@@ -56,10 +56,18 @@ export default function Grid(props) {
     console.log('scoll element', scrolled);
   };
 
+  // how many square beats can fit on a page
+  const numBeats = Math.ceil(width / BEAT_WIDTH);
+  const number = animate
+    ? (commonMultiple >= numBeats ? commonMultiple : numBeats) * 2
+    : commonMultiple;
+
+  const length = number * (BEAT_WIDTH + BEAT_MARGIN);
+  console.log('length', length);
   const beatsComponent = (
     <div>
       <div className="rhythm-container">
-        {[...Array(commonMultiple).keys()].map((i) => {
+        {[...Array(number).keys()].map((i) => {
           const isBeat = i % rightBeat === 0;
           return (
             <div
@@ -76,7 +84,7 @@ export default function Grid(props) {
         })}
       </div>
       <div className="rhythm-container">
-        {[...Array(commonMultiple).keys()].map((i) => {
+        {[...Array(number).keys()].map((i) => {
           const isBeat = i % leftBeat === 0;
           return (
             <div
@@ -96,7 +104,14 @@ export default function Grid(props) {
   );
 
   return (
-    <div className="grid-container" ref={scrollRef} onScroll={handleScroll}>
+    <div
+      className={cx({
+        'grid-container': true,
+        animate,
+      })}
+      ref={scrollRef}
+      onScroll={handleScroll}
+    >
       {beatsComponent}
     </div>
   );
