@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Grid from './Grid';
-import PlayButton from './PlayButton';
+import React, { useState } from "react";
+import Grid from "./components/Grid";
+import PlayButton from "./components/PlayButton";
 
-import './App.css';
+import "./App.css";
 
 export default function App() {
   const [animate, setAnimate] = useState(false);
